@@ -1,10 +1,15 @@
 #Uploading Firmware to you WildFire
+
 ##Equipment Needed
+
 - WildFire Board
 - USB A-to-microB cable
 - Computer
+
 ##Process
+
 Using [Google Chrome:](http://google.com/chrome)
+
 1. Get an account at [GitHub](http://github.com)
 2. Sign in to [analog.io](http://analog.io) using your GitHub account
 3. CLick on "Create Stream"
