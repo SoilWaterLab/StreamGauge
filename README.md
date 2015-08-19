@@ -12,7 +12,7 @@ Using [Google Chrome:](http://google.com/chrome)
 
 1. Get an account at [GitHub](http://github.com)
 2. Sign in to [analog.io](http://analog.io) using your GitHub account
-3. CLick on "Create Stream"
+3. Click on "Create Stream"
 4. Assign "Sparkfun" as the host
 5. Name your data stream in the title field
 6. Add a description, including GPS coordinates of your sensing station and calibration constants for its outputs
