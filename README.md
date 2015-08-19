@@ -1,4 +1,4 @@
-#Uploading Firmware to you WildFire
+#Uploading Firmware to your WildFire
 
 ##Equipment Needed
 
