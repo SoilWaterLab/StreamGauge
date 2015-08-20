@@ -97,7 +97,7 @@ In this characterization, the output of the depth sensor will be characterized a
 
 ###Calibration
 1. Enter the data into a spreadsheet in the form: 100,1000,2.41 etc., with the height as the independent variable and the outputs as the dependent variables (first LSB, then V)
-2. Find a linear regression that fits the values
+2. Find a linear regression that fits the values; make particular note of any hysteresis, as this will be directly proportional to the uncertainty of the sensor
 3. Record the equations of the functions that fit, along with their R^2 values
 4. Calculate the inverse functions, so LSB and V can be transformed to m
 
@@ -122,3 +122,140 @@ The temperature characterization takes advantage of the thermodynamic stability 
 - Dry Ice
 
 ###Pre-cal Procedure
+1. Place sensor head in a ziploc bag with all air pushed out in a beaker
+2. Mix equal parts by weight of 10 g each powdered dry ice, DI water, isopropanol, and acetone in the same beaker
+3. Place the beaker on a hot plate
+
+###Characterization
+1. Start the serial terminal of the DUT on the laptop
+2. Attach DMM to the power pin and the ground pin, and record the input voltage
+3. Attach DMM to the signal and ground pins
+4. Insert thermometer
+5. Turn on hot plate
+6. Log temperature, output LSB, and output voltage before all dry ice sublimates
+7. Wait until all compounds have melted, then log the temperature, output LSB, and output voltage; this is the water triple point
+8. Wait until the first bubbles are seen, then check the thermometer for a temperature of about 56 °C
+9. Log the temperature, output LSB, and output voltage; this is the acetone boiling point
+10. Wait until the bubbling starts to have renewed vigor, then check the thermometer for a temperature of about 82.6 °C
+11. Log the temperature, output LSB, and output voltage; this is the isopropanol boiling point
+12. Wait until the bubbling starts to have renewed vigor, then check the thermometer for a temperature of about 100 °C
+13. Log the temperature, output LSB, and output voltage; this is the water boiling point
+14. Turn off the hot plate
+15. Immediately place the ziploc bag containing the sensor head into cold water
+
+###Calibration
+1. Enter the data into a spreadsheet in the form: 100,1000,2.41 etc., with the temperature as the independent variable and the outputs as the dependent variables (first LSB, then V)
+2. Copy the serial output data into a spreadsheet as a time series
+2. Find a linear regression that fits the values
+3. Record the equations of the functions that fit, along with their R^2 values
+4. Calculate the inverse functions, so LSB and V can be transformed to °C
+
+##Conductivity
+###Theory of Operation
+The conductivity characterization is straightforward, and merely tests the conductivity of several NaCl solutions made by weight.
+
+###Equipment Needed
+- DUT
+- USB A-to-microB cable
+- Laptop
+- Conductivity Meter
+- Conductivity Standards
+- 5-1/2 Digit Multimeter (DMM, i.e. Keithley 2110)
+- Balance
+- Beakers
+
+###Reagents and Compounds Needed
+- NaCl
+- DI Water
+
+###Pre-cal Procedure
+1. Calibrate the conductivity meter using its own conductivity standards
+2. Make up solutions of 0.1, 0.5, 1, 5, and 10 g/L of NaCl and DI water in separate beakers
+3. Add a standard of pure DI water in a beaker
+4. Fill a rinse beaker with DI water
+5. Check conductivities with the conductivity meter, rinsing the probe with fresh DI water after each, from least to greatest concentration
+6. Record all conductivities
+
+###Characterization
+1. Start the serial terminal of the DUT on the laptop
+2. Attach DMM to the power pin and the ground pin, and record the input voltage
+3. Attach DMM to the signal and ground pins
+4. Immerse the sensor head in each beaker and record the serial output and voltage
+5. Rinse the sensor head in between each beaker with fresh DI water
+6. Move the sensor head to the next highest concentration
+7. Rinse the sensor head twice with DI water
+
+###Calibration
+1. Enter the data into a spreadsheet in the form: 100,1000,2.41 etc., with the conductivity as the independent variable and the outputs as the dependent variables (first LSB, then V)
+2. Copy the serial output data into a spreadsheet as a time series
+2. Find a linear regression that fits the values
+3. Record the equations of the functions that fit, along with their R^2 values
+4. Calculate the inverse functions, so LSB and V can be transformed to S/m
+
+##Turbidity
+###Theory of Operation
+The turbidity characterization is straightforward, and merely tests the turbidity of several oil and water suspensions.
+
+###Equipment Needed
+- DUT
+- USB A-to-microB cable
+- Laptop
+- 5-1/2 Digit Multimeter (DMM, i.e. Keithley 2110)
+- Balance
+- Beakers
+- Turbidity Meter
+- Turbidity Standards
+
+###Reagents and Compounds Needed
+- Vegetable Oil
+- Soap
+- Ammonia
+- DI Water
+
+###Pre-cal Procedure
+1. Calibrate the turbidity meter using its own turbidity standards
+2. Make solutions of 5%, 10%, 20%, and 50% oil to water by mass in their own beakers
+3. Make an additional beaker of only water
+3. Add sufficient soap to each beaker and stir until the oil is completely suspended
+4. Check turbidities of each beaker with the turbidity meter and record them
+5. Clean the turbidity meter with ammonia and water
+
+###Characterization
+1. Start the serial terminal of the DUT on the laptop
+2. Attach DMM to the power pin and the ground pin, and record the input voltage
+3. Attach DMM to the signal and ground pins
+4. Immerse the sensor head in each beaker and record the serial output and voltage
+5. Clean sensor head with ammonia and water
+
+###Calibration
+1. Enter the data into a spreadsheet in the form: 100,1000,2.41 etc., with the turbidity as the independent variable and the outputs as the dependent variables (first LSB, then V)
+2. Copy the serial output data into a spreadsheet as a time series
+2. Find a linear regression that fits the values
+3. Record the equations of the functions that fit, along with their R^2 values
+4. Calculate the inverse functions, so LSB and V can be transformed to NTU
+
+##Main ADCs
+###Theory of Operation
+Each ADC channel is referenced to the rail voltage and ground. Since the ATMEGA1264P uses 10-bit ADCs, these need to be checked for correlation to real values of voltage.
+
+###Equipment Needed
+- DUT
+- USB A-to-microB cable
+- Laptop
+- 5-1/2 Digit Multimeter
+- Voltage Calibrator
+
+###Characterization
+1. Start the serial terminal of the DUT on the laptop
+2. Unplug all four sensor signal lines, noting their order
+3. Attach the voltage calibrator to A0 and ground in parallel with the DMM
+4. Set the voltage calibrator for 0 V, then record the output from the serial terminal and the DMM
+5. Repeat the former step at 500 mV, 1 V, 1.500 V, and 2 V
+6. Repeat the former steps for A1, A2, and A3
+7. Detach all instruments
+8. Reattach all sensor signal lines
+
+###Calibration
+1. Enter the data into a spreadsheet in the form: 100,1000,2.41 etc., with the input voltage as the independent variable and the outputs as the dependent variables (first LSB, then V)
+2. Copy the serial output data into a spreadsheet as a time series
+3. Check the linearity and sensitivity of the ADCs in LSB/V both with V as measured and V as input
