@@ -109,7 +109,7 @@ The temperature characterization takes advantage of the thermodynamic stability 
 - DUT
 - USB A-to-microB cable
 - Laptop
-- 5-1/2 Digit Multimeter (DMM, i.e. Keithley 2110)
+- 5-1/2 Digit Multimeter
 - Balance
 - Beaker
 - Thermometer
@@ -160,7 +160,7 @@ The conductivity characterization is straightforward, and merely tests the condu
 - Laptop
 - Conductivity Meter
 - Conductivity Standards
-- 5-1/2 Digit Multimeter (DMM, i.e. Keithley 2110)
+- 5-1/2 Digit Multimeter
 - Balance
 - Beakers
 
@@ -200,7 +200,7 @@ The turbidity characterization is straightforward, and merely tests the turbidit
 - DUT
 - USB A-to-microB cable
 - Laptop
-- 5-1/2 Digit Multimeter (DMM, i.e. Keithley 2110)
+- 5-1/2 Digit Multimeter
 - Balance
 - Beakers
 - Turbidity Meter
