@@ -1,16 +1,15 @@
-#Calibration Protocols for the Cornell Integrated Sensing Station v1 (CISSv1)
-
+#Calibration Protocols for the Cornell Stream Gauging Station (CSGS)
 *Pete Marchetto, Postdoctoral Research Associate, Cornell Soil and Water Lab*
 
 ##Introduction
-The CISSv1 is the first version of a massively deployable integrated sensing system for stream gauging. This document is a collection of five protocols to characterize and calibrate its sensors and main microcontroller board. All of these protocols should be carried out at the very least at both room temperature and the maximum and minimum temperatures that the Device Under Test (DUT) will experience in use.
+The CSGS is the first version of a massively deployable integrated sensing system for stream gauging. This document is a collection of five protocols to characterize and calibrate its sensors and main microcontroller board. All of these protocols should be carried out at the very least at both room temperature and the maximum and minimum temperatures that the Device Under Test (DUT) will experience in use.
 
 The processes described in these protocols are not calibrations in and of themselves, but are actually characterizations of the sensors and sensing system. The calibration is done in post-processing, where the digital output values of the CISS will be put into the transfer functions described by these tests.
 
 Most importantly, these protocols are scientific experiments: the hypothesis is that the DUT will function as a conglomeration of linear sensors with definable transfer functions. By doing this experiment, one can to expect to either support that hypothesis and gather data that will allow for proper mapping of the sensitivity of the DUT in each of its modalities, or to refute the hypothesis, and find that the system must be repaired.
 
 ###Equipment Needed
-- DUT (CISS along with its depth sensor and sensor head)
+- DUT (CSGS along with its depth sensor and sensor head)
 - USB A-to-microB cable
 - Laptop
 - Conductivity Meter (i.e. Oakton CON 600)
