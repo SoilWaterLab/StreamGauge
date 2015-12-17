@@ -11,3 +11,5 @@ Good luck, and let us know if you have any questions by e-mailing [pmm223@cornel
 ###Example:
 
 Data from [@weestinkyglen](http://twitter.com/weestinkyglen) can be seen on [analog.io/sB2](http://analog.io/sB2).
+
+![image](https://raw.githubusercontent.com/SoilWaterLab/StreamGauge/master/Images/WeeStinky.jpg)
