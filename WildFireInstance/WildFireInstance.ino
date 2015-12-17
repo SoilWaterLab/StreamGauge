@@ -35,10 +35,10 @@ WildFire wildfire;
 
 WildFire_CC3000 cc3000;
 
-#define WLAN_SSID       "RedRover"           // cannot be longer than 32 characters!
-#define WLAN_PASS       ""
+#define WLAN_SSID       "Homestead"           // cannot be longer than 32 characters!
+#define WLAN_PASS       "homestead"
 // Security can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
-#define WLAN_SECURITY   WLAN_SEC_UNSEC
+#define WLAN_SECURITY   WLAN_SEC_WPA2
 
 #define IDLE_TIMEOUT_MS  3000      // Amount of time to wait (in milliseconds) with no data 
                                    // received before closing the connection.  If you know the server
@@ -46,7 +46,7 @@ WildFire_CC3000 cc3000;
 
 // What page to grab!
 #define WEBSITE      "data.sparkfun.com"
-#define WEBPAGE      "input/MGGvD5py95U3KE3q8Qlq?private_key=nzzox2krM2hVldVqDXZq&"
+#define WEBPAGE      "input/yAXdmKprgZUdpaKaaoZ1?private_key=4WJEZngxYofBYq5qq9V7&"
 
 
 /**************************************************************************/
